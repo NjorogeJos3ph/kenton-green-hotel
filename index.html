@@ -442,7 +442,7 @@
 
   <!-- Floating WhatsApp -->
   <a id="floatingWhatsApp" href="#" target="_blank" rel="noopener noreferrer"
-    aria-label="Contact Theta Resort on WhatsApp"
+    aria-label="Contact Theta Hotel on WhatsApp"
     class="wa-float fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl hover:scale-105 transition">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -513,7 +513,7 @@
     const whatsappUrl = (message) =>
       'https://wa.me/' + RESORT_WHATSAPP + '?text=' + encodeURIComponent(message);
 
-    const generalMessage = 'Hi Theta Resort, I would like to book a room.';
+    const generalMessage = 'Hi Theta Hotel, I would like to book a room.';
     [
       'floatingWhatsApp',
       'contactWhatsApp',
@@ -527,7 +527,7 @@
     });
 
     document.getElementById('diningWhatsApp').href =
-      whatsappUrl('Hi Theta Resort, I would like to enquire about dining, your menu and table availability.');
+      whatsappUrl('Hi Theta Hotel, I would like to enquire about dining, your menu and table availability.');
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -643,7 +643,7 @@
       }
 
       const message =
-        'Hi Theta Resort, I would like to enquire about a booking.\n\n' +
+        'Hi Theta Hotel, I would like to enquire about a booking.\n\n' +
         'Room: ' + currentRoom + '\n' +
         'Name: ' + name + '\n' +
         'Check-in: ' + checkIn + '\n' +
@@ -664,7 +664,7 @@
       const details = document.getElementById('eventMessage').value.trim();
 
       const message =
-        'Hi Theta Resort, I would like to request an event quote.\n\n' +
+        'Hi Theta Hotel, I would like to request an event quote.\n\n' +
         'Name: ' + name + '\n' +
         'Preferred date: ' + date + '\n' +
         'Number of guests/delegates: ' + guests + '\n' +
