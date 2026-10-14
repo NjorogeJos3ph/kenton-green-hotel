@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A3C34">
+  <meta name="description" content="Discover Theta Country Resort in Juja, Kenya. Explore accommodation, dining, conferences and events. Contact us directly to enquire.">
+
+  <title>Theta Country Resort | Your Serene Escape in Juja</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#1A3C34',
+            forestLight: '#285348',
+            gold: '#D4AF37',
+            cream: '#F5F5DC',
+            sand: '#F8F6F0'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body { font-family: 'Inter', sans-serif; color: #25332e; }
+    h1,h2,h3,.serif { font-family: 'Playfair Display', serif; }
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(13,35,29,.82), rgba(13,35,29,.43) 55%, rgba(13,35,29,.15)),
+        url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=85') center/cover;
+    }
+    .section-label { letter-spacing: .22em; }
+    .gold-line { width: 58px; height: 2px; background: #D4AF37; }
+    .room-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .room-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px #183b3018; }
+    .btn-gold { background: #D4AF37; color: #172d26; transition: .2s; }
+    .btn-gold:hover { background: #e6c34f; transform: translateY(-1px); }
+    .btn-outline { border: 1px solid rgba(255,255,255,.7); transition: .2s; }
+    .btn-outline:hover { background: white; color: #1A3C34; }
+    .field {
+      width: 100%; border: 1px solid #deded4; border-radius: 7px;
+      padding: 12px 13px; background: #fff; outline: none;
+    }
+    .field:focus { border-color: #1A3C34; box-shadow: 0 0 0 3px #1a3c3415; }
+    .modal-backdrop { background: rgba(7,22,17,.72); backdrop-filter: blur(5px); }
+    .hidden-modal { display: none !important; }
+    .wa-float { box-shadow: 0 8px 25px #0003; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+
+<style>
+    .text-amber-400 { color: #FBBF24 !important; }
+    .text-amber-200 { color: #FDE68A !important; }
+    h1, h2, h3 { color: #FFFFFF !important; }
+</style>
+
+
+<style>
+    /* 1. Force DARK text on any LIGHT background */
+    .bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white p, .bg-white span, .bg-white a,
+    .bg-gray-50 h1, .bg-gray-50 h2, .bg-gray-50 h3, .bg-gray-50 p, .bg-gray-50 span, .bg-gray-50 a,
+    .bg-gray-100 h1, .bg-gray-100 h2, .bg-gray-100 h3, .bg-gray-100 p, .bg-gray-100 span, .bg-gray-100 a,
+    .bg-slate-50 h1, .bg-slate-50 h2, .bg-slate-50 h3, .bg-slate-50 p, .bg-slate-50 span, .bg-slate-50 a {
+        color: #111827 !important;
+    }
+    
+    /* 2. Force WHITE text on any DARK background */
+    .bg-gray-900 h1, .bg-gray-900 h2, .bg-gray-900 h3, .bg-gray-900 h4, .bg-gray-900 p, .bg-gray-900 span, .bg-gray-900 a,
+    .bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3, .bg-slate-900 p, .bg-slate-900 span, .bg-slate-900 a,
+    .bg-black h1, .bg-black h2, .bg-black h3, .bg-black p, .bg-black span, .bg-black a {
+        color: #FFFFFF !important;
+    }
+
+    /* 3. Force all previously dark green links/text to BRIGHT GOLD */
+    a[href*="contact"], a[href*="get-in-touch"], 
+    .text-green-700, .text-green-800, .text-green-900,
+    .text-emerald-700, .text-emerald-800, .text-emerald-900,
+    .text-teal-700, .text-teal-800, .text-teal-900 {
+        color: #FBBF24 !important; /* Bright Gold */
+    }
+
+    /* 4. Specific fix for the "Find Your Room" white-on-white issue */
+    .bg-gray-50 h2, .bg-gray-100 h2, .bg-white h2, .bg-slate-50 h2, 
+    .bg-gray-50 h3, .bg-gray-100 h3, .bg-white h3, .bg-slate-50 h3 {
+        color: #1F2937 !important; /* Dark Gray */
+    }
+
+    /* 5. Fix for "ACCOMMODATION" badge on the image */
+    .badge, .tag, .bg-blue-900 span, .bg-slate-800 span {
+        color: #FBBF24 !important;
+    }
+</style>
+
+</head>
+
+<body class="bg-gray-900 text-white" class="bg-gray-900">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 bg-gray-900/95 backdrop-blur border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[76px] flex items-center justify-between gap-4">
+      <a href="#home" class="flex items-center gap-3 min-w-0" aria-label="Theta Country Resort home">
+        <div class="w-11 h-11 rounded-full bg-forest text-gold flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-leaf text-xl"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="text-forest font-semibold text-[11px] sm:text-sm tracking-[.13em] leading-tight">THETA COUNTRY</div>
+          <div class="text-gray-500 text-[10px] sm:text-xs tracking-[.22em] mt-1">RESORT · JUJA</div>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 text-sm text-gray-400">
+        <a class="hover:text-forest" href="#rooms">Rooms</a>
+        <a class="hover:text-forest" href="#conference">Conference</a>
+        <a class="hover:text-forest" href="#dining">Dining</a>
+        <a class="hover:text-forest" href="#contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#rooms" class="hidden sm:inline-flex btn-gold rounded px-5 py-3 text-sm font-semibold">
+          Enquire / Book
+        </a>
+        <button id="menuToggle" class="lg:hidden text-forest p-2" aria-label="Open navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden-modal lg:hidden bg-gray-900 border-t border-gray-100 px-5 py-4 space-y-4 text-sm">
+      <a class="block" href="#rooms">Rooms & Accommodation</a>
+      <a class="block" href="#conference">Conference & Events</a>
+      <a class="block" href="#dining">Dining</a>
+      <a class="block" href="#contact">Contact & Location</a>
+      <a class="block font-semibold text-forest" href="#rooms">Enquire about a booking →</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero min-h-[660px] md:min-h-[720px] flex items-center text-white">
+      <div class="max-w-7xl mx-auto w-full px-6 lg:px-10 py-24">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="gold-line"></div>
+            <p class="section-label text-xs sm:text-sm uppercase text-gold font-semibold">A garden retreat in Juja</p>
+          </div>
+
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl leading-[1.08] font-medium mb-7">
+            Your Serene<br>Escape in <span class="text-gold italic">Juja.</span>
+          </h1>
+
+          <p class="text-gray-100 text-base sm:text-lg leading-8 max-w-xl mb-9">
+            Step away from the everyday. Discover a welcoming retreat for restful stays, memorable gatherings and unhurried dining.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#rooms" class="btn-gold rounded px-7 py-4 font-semibold text-sm text-center">
+              Explore Accommodation <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#conference" class="btn-outline rounded px-7 py-4 font-semibold text-sm text-center">
+              Discover Events
+            </a>
+          </div>
+
+          <div class="mt-14 flex flex-wrap gap-x-7 gap-y-4 text-sm text-white/90">
+            <span><i class="fa-solid fa-bed text-gold mr-2"></i>Comfortable stays</span>
+            <span><i class="fa-solid fa-seedling text-gold mr-2"></i>Garden atmosphere</span>
+            <span><i class="fa-solid fa-people-group text-gold mr-2"></i>Gatherings & events</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome strip -->
+    <section class="bg-forest text-white">
+      <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+        <div class="flex items-center justify-center sm:justify-start gap-4">
+          <i class="fa-solid fa-location-dot text-gold text-2xl"></i>
+          <div><p class="font-semibold text-sm">Conveniently located</p><p class="text-white/65 text-xs mt-1">Juja, along Meru–Nairobi Highway</p></div>
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-4">
+          <i class="fa-solid fa-bed text-gold text-2xl"></i>
+          <div><p class="font-semibold text-sm">Room enquiries</p><p class="text-white/65 text-xs mt-1">Ask about availability and rates</p></div>
+        </div>
+        <div class="flex items-center justify-center sm:justify-start gap-4">
+          <i class="fa-solid fa-calendar-check text-gold text-2xl"></i>
+          <div><p class="font-semibold text-sm">Plan your gathering</p><p class="text-white/65 text-xs mt-1">Enquire about meetings and events</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 md:py-28 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div class="relative">
+          <img class="w-full h-[390px] md:h-[500px] object-cover rounded-sm"
+               src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=1200&q=85"
+               alt="Peaceful resort swimming pool surrounded by greenery" loading="lazy">
+          <div class="absolute -bottom-5 -right-3 md:-right-5 bg-cream p-5 md:p-7 max-w-[220px]">
+            <p class="serif text-2xl text-forest">Pause.</p>
+            <p class="serif text-2xl text-forest italic">Unwind.</p>
+            <p class="text-xs text-gray-400 mt-2 leading-5">Make room for a better kind of getaway.</p>
+          </div>
+        </div>
+        <div class="pt-5 md:pt-0">
+          <p class="section-label text-xs text-forest font-bold uppercase mb-5">Welcome to Theta</p>
+          <div class="gold-line mb-6"></div>
+          <h2 class="text-4xl md:text-5xl text-forest leading-tight mb-6">Space to rest.<br>Room to connect.</h2>
+          <p class="text-gray-400 leading-8 mb-5">
+            Whether you're planning a quiet overnight stay, a business meeting or a special celebration, Theta Country Resort offers a place to bring people together.
+          </p>
+          <p class="text-gray-400 leading-8 mb-8">
+            Explore the possibilities, then speak directly with the team about the details that matter to you.
+          </p>
+          <a href="#contact" class="text-forest font-semibold text-sm border-b border-gold pb-2">
+            Get in touch with our team <i class="fa-solid fa-arrow-right ml-2 text-gold"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms -->
+    <section id="rooms" class="bg-sand py-20 md:py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="section-label text-xs text-forest font-bold uppercase mb-4">Stay with us</p>
+          <h2 class="text-4xl md:text-5xl text-forest mb-5">Find Your Room</h2>
+          <div class="gold-line mx-auto mb-5"></div>
+          <p class="text-gray-400 leading-7">Choose the stay that suits your visit. Contact the resort to confirm availability, amenities and the current rate.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-7 max-w-5xl mx-auto">
+          <!-- Room 1 -->
+          <article class="room-card bg-gray-900 rounded-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-64 object-cover"
+                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1100&q=85"
+                alt="Elegant double hotel bedroom" loading="lazy">
+              <span class="absolute top-4 left-4 bg-gray-900/95 text-forest text-[10px] font-bold tracking-widest uppercase px-3 py-2">Accommodation</span>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex justify-between items-start gap-4 mb-4">
+                <h3 class="text-2xl text-forest">Deluxe Double Room</h3>
+                <span class="text-right shrink-0"><span class="block text-[10px] text-gray-500 uppercase">Demo rate</span><span class="text-forest font-semibold">KSh 6,500</span><span class="block text-xs text-gray-500">per night*</span></span>
+              </div>
+              <p class="text-sm text-gray-400 leading-6 mb-5">A comfortable option for couples or guests who prefer a little more space.</p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-gray-400 border-y border-gray-100 py-5 mb-6">
+                <span><i class="fa-solid fa-bed text-gold mr-2"></i>Double bed</span>
+                <span><i class="fa-solid fa-wifi text-gold mr-2"></i>Wi-Fi enquiry</span>
+                <span><i class="fa-solid fa-tv text-gold mr-2"></i>TV enquiry</span>
+                <span><i class="fa-solid fa-mug-hot text-gold mr-2"></i>Breakfast enquiry</span>
+              </div>
+              <button class="bookRoom w-full bg-forest text-white py-4 text-sm font-semibold hover:bg-forestLight transition"
+                data-room="Deluxe Double Room">
+                Enquire about this room <i class="fa-solid fa-arrow-right ml-2 text-gold"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Room 2 -->
+          <article class="room-card bg-gray-900 rounded-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-64 object-cover"
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85"
+                alt="Calm and comfortable hotel bedroom interior" loading="lazy">
+              <span class="absolute top-4 left-4 bg-gray-900/95 text-forest text-[10px] font-bold tracking-widest uppercase px-3 py-2">Accommodation</span>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex justify-between items-start gap-4 mb-4">
+                <h3 class="text-2xl text-forest">Deluxe Single Room</h3>
+                <span class="text-right shrink-0"><span class="block text-[10px] text-gray-500 uppercase">Demo rate</span><span class="text-forest font-semibold">KSh 4,500</span><span class="block text-xs text-gray-500">per night*</span></span>
+              </div>
+              <p class="text-sm text-gray-400 leading-6 mb-5">A welcoming base for solo travellers, work visits and short getaways.</p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-gray-400 border-y border-gray-100 py-5 mb-6">
+                <span><i class="fa-solid fa-bed text-gold mr-2"></i>Single occupancy</span>
+                <span><i class="fa-solid fa-wifi text-gold mr-2"></i>Wi-Fi enquiry</span>
+                <span><i class="fa-solid fa-tv text-gold mr-2"></i>TV enquiry</span>
+                <span><i class="fa-solid fa-mug-hot text-gold mr-2"></i>Breakfast enquiry</span>
+              </div>
+              <button class="bookRoom w-full bg-forest text-white py-4 text-sm font-semibold hover:bg-forestLight transition"
+                data-room="Deluxe Single Room">
+                Enquire about this room <i class="fa-solid fa-arrow-right ml-2 text-gold"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="text-center text-xs text-gray-500 mt-7">*Rates shown are illustrative demo figures, not confirmed hotel prices. All amenities and availability must be confirmed directly with the resort.</p>
+      </div>
+    </section>
+
+    <!-- Conference -->
+    <section id="conference" class="py-20 md:py-28 px-6">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="section-label text-xs text-forest font-bold uppercase mb-4">Meetings & celebrations</p>
+          <div class="gold-line mb-6"></div>
+          <h2 class="text-4xl md:text-5xl text-forest leading-tight mb-6">Bring people<br>together beautifully.</h2>
+          <p class="text-gray-400 leading-8 mb-8">
+            From corporate meetings and team retreats to family celebrations, tell us what you're planning. Our team can help you enquire about suitable spaces and arrangements.
+          </p>
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-full bg-cream flex items-center justify-center text-forest shrink-0"><i class="fa-solid fa-briefcase"></i></div>
+              <div><h3 class="text-lg text-forest mb-1">Corporate gatherings</h3><p class="text-sm text-gray-500 leading-6">Enquire about meetings, workshops and team sessions.</p></div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-full bg-cream flex items-center justify-center text-forest shrink-0"><i class="fa-solid fa-champagne-glasses"></i></div>
+              <div><h3 class="text-lg text-forest mb-1">Special occasions</h3><p class="text-sm text-gray-500 leading-6">Discuss your event date, guest numbers and requirements.</p></div>
+            </div>
+          </div>
+          <img class="mt-9 w-full h-56 object-cover rounded-sm"
+            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85"
+            alt="Elegant event and conference table setting" loading="lazy">
+        </div>
+
+        <div class="bg-sand p-6 sm:p-9 md:p-10">
+          <p class="section-label text-xs text-forest font-bold uppercase mb-3">Start planning</p>
+          <h3 class="text-3xl text-forest mb-3">Request an Event Quote</h3>
+          <p class="text-sm text-gray-400 leading-6 mb-7">Share a few details and send your enquiry directly to the resort via WhatsApp.</p>
+
+          <form id="eventForm" class="space-y-5">
+            <div>
+              <label for="eventName" class="block text-xs font-semibold mb-2">Your name *</label>
+              <input id="eventName" class="field" required placeholder="Full name">
+            </div>
+            <div>
+              <label for="eventDate" class="block text-xs font-semibold mb-2">Preferred event date *</label>
+              <input id="eventDate" class="field" type="date" required>
+            </div>
+            <div>
+              <label for="delegates" class="block text-xs font-semibold mb-2">Number of delegates / guests *</label>
+              <input id="delegates" class="field" type="number" min="1" max="10000" required placeholder="e.g. 30">
+            </div>
+            <div>
+              <label for="eventMessage" class="block text-xs font-semibold mb-2">Tell us about your event</label>
+              <textarea id="eventMessage" class="field" rows="4" placeholder="Meeting, wedding, catering, seating, or other requirements"></textarea>
+            </div>
+            <button type="submit" class="btn-gold w-full py-4 rounded font-semibold text-sm">
+              Send Quote Enquiry <i class="fa-brands fa-whatsapp ml-2"></i>
+            </button>
+            <p class="text-xs text-gray-500">This opens WhatsApp with your message. No information is submitted until you choose to send it.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining -->
+    <section id="dining" class="bg-forest text-white">
+      <div class="grid md:grid-cols-2">
+        <div class="min-h-[360px] md:min-h-[540px]">
+          <img class="w-full h-full min-h-[360px] md:min-h-[540px] object-cover"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85"
+            alt="Beautifully presented restaurant dining experience" loading="lazy">
+        </div>
+        <div class="flex items-center px-7 py-16 sm:px-12 lg:px-16">
+          <div class="max-w-xl">
+            <p class="section-label text-xs uppercase text-gold font-bold mb-5">At the table</p>
+            <div class="gold-line mb-6"></div>
+            <h2 class="text-4xl md:text-5xl leading-tight mb-6">Good food.<br><span class="italic text-gold">Good company.</span></h2>
+            <p class="text-white/75 leading-8 mb-6">
+              Make time for a relaxed meal, a conversation that runs longer than planned, or a table shared with friends and colleagues.
+            </p>
+            <p class="text-white/75 leading-8 mb-9">
+              Contact the team to ask about today's menu, dining hours, table availability and special arrangements.
+            </p>
+            <a id="diningWhatsApp" href="#" class="inline-flex items-center gap-3 btn-gold px-7 py-4 rounded text-sm font-semibold">
+              Enquire about dining <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct booking callout -->
+    <section class="bg-cream px-6 py-16 md:py-20">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="section-label text-xs text-forest font-bold uppercase mb-4">Your stay, your way</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl text-forest mb-5">Let's plan your visit.</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-7 mb-8">
+          Ask the resort directly about room rates, available dates, dining and event arrangements before confirming your plans.
+        </p>
+        <a id="directBooking" href="#" class="inline-flex items-center justify-center gap-3 bg-forest text-white px-8 py-4 rounded font-semibold text-sm hover:bg-forestLight">
+          <i class="fa-brands fa-whatsapp text-xl text-gold"></i> Enquire Directly on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+          <div>
+            <p class="section-label text-xs text-forest font-bold uppercase mb-4">Find your way</p>
+            <div class="gold-line mb-6"></div>
+            <h2 class="text-4xl md:text-5xl text-forest mb-6">We look forward<br>to welcoming you.</h2>
+            <p class="text-gray-400 leading-7 mb-9">Planning a visit? Reach out to confirm directions, availability or any details you need before travelling.</p>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center text-forest shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                <div><p class="font-semibold text-forest mb-1">Find us</p><p class="text-sm text-gray-400 leading-6">Meru–Nairobi Highway, Juja, Kenya</p></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center text-forest shrink-0"><i class="fa-solid fa-phone"></i></div>
+                <div><p class="font-semibold text-forest mb-1">Call the resort</p><a class="text-sm text-gray-400 hover:text-forest" href="tel:+254726680399">+254 726 680399</a></div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center text-forest shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                <div><p class="font-semibold text-forest mb-1">Send an enquiry</p><a id="contactWhatsApp" href="#" class="text-sm text-gray-400 hover:text-forest">Chat with the resort on WhatsApp</a></div>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Theta+Country+Resort+Juja+Kenya" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-9 bg-forest text-white px-6 py-4 rounded text-sm font-semibold">
+              <i class="fa-solid fa-map-location-dot text-gold"></i> Open directions in Google Maps
+            </a>
+          </div>
+
+          <div class="min-h-[380px] bg-sand rounded-sm overflow-hidden">
+            <iframe
+              title="Map showing Theta Country Resort in Juja"
+              src="https://maps.google.com/maps?q=Theta%20Country%20Resort%20Juja%20Kenya&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0; min-height:380px"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#102920] text-white px-6 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full bg-gray-900/10 text-gold flex items-center justify-center"><i class="fa-solid fa-leaf"></i></div>
+            <div><p class="font-semibold tracking-widest text-sm">THETA COUNTRY</p><p class="text-white/50 text-[10px] tracking-[.2em] mt-1">RESORT · JUJA</p></div>
+          </div>
+          <p class="text-sm text-white/60 leading-7">A place to rest, reconnect and bring people together in Juja, Kenya.</p>
+        </div>
+        <div>
+          <h3 class="text-lg text-gold mb-5">Explore</h3>
+          <div class="space-y-3 text-sm text-white/65">
+            <a class="block hover:text-white" href="#rooms">Accommodation</a>
+            <a class="block hover:text-white" href="#conference">Conference & events</a>
+            <a class="block hover:text-white" href="#dining">Dining</a>
+            <a class="block hover:text-white" href="#contact">Location & contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg text-gold mb-5">Contact</h3>
+          <p class="text-sm text-white/65 leading-7">Meru–Nairobi Highway<br>Juja, Kenya</p>
+          <a class="inline-block mt-3 text-sm hover:text-gold" href="tel:+254726680399">+254 726 680399</a>
+        </div>
+        <div>
+          <h3 class="text-lg text-gold mb-5">Plan your visit</h3>
+          <p class="text-sm text-white/65 leading-7 mb-5">Speak directly with the resort about rates, dates and event arrangements.</p>
+          <a id="footerWhatsApp" href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-gold">
+            WhatsApp the team <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row gap-3 justify-between text-xs text-white/45">
+        <p>© <span id="year"></span> Theta Country Resort. All rights reserved.</p>
+        <p>Website demo · Rates and services to be confirmed by the resort.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a id="floatingWhatsApp" href="#" target="_blank" rel="noopener noreferrer"
+    aria-label="Contact Theta Resort on WhatsApp"
+    class="wa-float fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl hover:scale-105 transition">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Booking / M-Pesa demo modal -->
+  <div id="bookingModal" class="hidden-modal fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="bg-gray-900 rounded-xl w-full max-w-md max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="bg-forest text-white px-6 py-5 flex items-start justify-between gap-4">
+        <div>
+          <p class="text-gold text-[10px] uppercase tracking-[.2em] font-bold mb-2">Direct booking enquiry</p>
+          <h2 id="modalTitle" class="text-2xl">Plan Your Stay</h2>
+          <p id="selectedRoom" class="text-white/70 text-sm mt-2">Choose your room</p>
+        </div>
+        <button id="closeModal" class="text-white/80 hover:text-white p-2" aria-label="Close booking window"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+
+      <div class="p-6">
+        <div class="flex gap-3 items-start bg-cream p-4 rounded-lg mb-6">
+          <i class="fa-solid fa-circle-info text-forest mt-1"></i>
+          <p class="text-xs text-gray-300 leading-5">This is a demonstration booking flow. No reservation or payment will be processed. Confirm rates and availability with the resort.</p>
+        </div>
+
+        <form id="bookingForm" class="space-y-4">
+          <div>
+            <label for="guestName" class="block text-xs font-semibold mb-2">Your name</label>
+            <input id="guestName" class="field" required placeholder="Full name">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label for="checkIn" class="block text-xs font-semibold mb-2">Check-in</label>
+              <input id="checkIn" class="field" type="date" required>
+            </div>
+            <div>
+              <label for="checkOut" class="block text-xs font-semibold mb-2">Check-out</label>
+              <input id="checkOut" class="field" type="date" required>
+            </div>
+          </div>
+          <div>
+            <label for="guestPhone" class="block text-xs font-semibold mb-2">WhatsApp / phone number</label>
+            <input id="guestPhone" class="field" type="tel" required placeholder="e.g. 07XX XXX XXX">
+          </div>
+          <button type="submit" class="w-full bg-forest text-white rounded py-4 text-sm font-semibold hover:bg-forestLight">
+            Continue to demo payment <i class="fa-solid fa-arrow-right ml-2 text-gold"></i>
+          </button>
+        </form>
+
+        <div id="paymentDemo" class="hidden-modal mt-6 border-t border-gray-100 pt-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-full bg-green-50 text-amber-400 flex items-center justify-center text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div><h3 class="font-semibold text-forest">M-Pesa deposit demo</h3><p class="text-xs text-gray-500">Simulation only — no real payment</p></div>
+          </div>
+          <p class="text-sm text-gray-400 leading-6 mb-4">A real booking system could request a deposit after the resort confirms availability and the amount due.</p>
+          <label for="mpesaNumber" class="block text-xs font-semibold mb-2">M-Pesa number (demo only)</label>
+          <input id="mpesaNumber" class="field mb-3" type="tel" placeholder="07XX XXX XXX">
+          <button id="simulatePayment" type="button" class="w-full bg-[#168447] text-white rounded py-4 text-sm font-semibold">Simulate STK Push</button>
+          <p id="paymentStatus" class="hidden-modal text-sm text-center mt-4 leading-6" role="status"></p>
+          <button id="sendBookingEnquiry" type="button" class="w-full border border-forest text-forest rounded py-3 mt-4 text-sm font-semibold">
+            Send booking enquiry via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Resort contact number in international format, without the + sign.
+    const RESORT_WHATSAPP = '254726680399';
+    const whatsappUrl = (message) =>
+      'https://wa.me/' + RESORT_WHATSAPP + '?text=' + encodeURIComponent(message);
+
+    const generalMessage = 'Hi Theta Resort, I would like to book a room.';
+    [
+      'floatingWhatsApp',
+      'contactWhatsApp',
+      'directBooking',
+      'footerWhatsApp'
+    ].forEach(id => {
+      const link = document.getElementById(id);
+      link.href = whatsappUrl(generalMessage);
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+
+    document.getElementById('diningWhatsApp').href =
+      whatsappUrl('Hi Theta Resort, I would like to enquire about dining, your menu and table availability.');
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      const isClosed = mobileMenu.classList.contains('hidden-modal');
+      mobileMenu.classList.toggle('hidden-modal');
+      menuToggle.setAttribute('aria-expanded', String(isClosed));
+      menuToggle.innerHTML = isClosed
+        ? '<i class="fa-solid fa-xmark text-xl"></i>'
+        : '<i class="fa-solid fa-bars text-xl"></i>';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden-modal');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+      });
+    });
+
+    // Booking modal
+    const modal = document.getElementById('bookingModal');
+    const bookingForm = document.getElementById('bookingForm');
+    const paymentDemo = document.getElementById('paymentDemo');
+    const selectedRoom = document.getElementById('selectedRoom');
+    const paymentStatus = document.getElementById('paymentStatus');
+    let currentRoom = '';
+
+    function openBooking(room) {
+      currentRoom = room;
+      selectedRoom.textContent = room;
+      modal.classList.remove('hidden-modal');
+      document.body.style.overflow = 'hidden';
+      paymentDemo.classList.add('hidden-modal');
+      paymentStatus.classList.add('hidden-modal');
+      bookingForm.reset();
+      document.getElementById('checkIn').min = new Date().toISOString().split('T')[0];
+      document.getElementById('checkOut').min = new Date().toISOString().split('T')[0];
+      document.getElementById('guestName').focus();
+    }
+
+    function closeBooking() {
+      modal.classList.add('hidden-modal');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.bookRoom').forEach(button => {
+      button.addEventListener('click', () => openBooking(button.dataset.room));
+    });
+
+    document.getElementById('closeModal').addEventListener('click', closeBooking);
+
+    modal.addEventListener('click', event => {
+      if (event.target === modal) closeBooking();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !modal.classList.contains('hidden-modal')) closeBooking();
+    });
+
+    document.getElementById('checkIn').addEventListener('change', event => {
+      document.getElementById('checkOut').min = event.target.value;
+      if (document.getElementById('checkOut').value &&
+          document.getElementById('checkOut').value <= event.target.value) {
+        document.getElementById('checkOut').value = '';
+      }
+    });
+
+    bookingForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const checkIn = document.getElementById('checkIn').value;
+      const checkOut = document.getElementById('checkOut').value;
+
+      if (checkOut <= checkIn) {
+        alert('Check-out must be after check-in.');
+        return;
+      }
+
+      paymentDemo.classList.remove('hidden-modal');
+      paymentStatus.classList.add('hidden-modal');
+      paymentDemo.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    // Explicitly simulated payment: never calls a payment API.
+    document.getElementById('simulatePayment').addEventListener('click', () => {
+      const number = document.getElementById('mpesaNumber').value.trim();
+      if (!number) {
+        alert('Enter a demo phone number to continue the simulation.');
+        return;
+      }
+
+      paymentStatus.textContent =
+        'DEMO ONLY: No STK Push was sent and no money was requested or received. In production, this step must connect to an authorised M-Pesa Daraja integration.';
+      paymentStatus.classList.remove('hidden-modal');
+      paymentStatus.className = 'text-sm text-center mt-4 leading-6 text-forest bg-green-50 rounded-lg p-4';
+    });
+
+    document.getElementById('sendBookingEnquiry').addEventListener('click', () => {
+      const name = document.getElementById('guestName').value.trim();
+      const checkIn = document.getElementById('checkIn').value;
+      const checkOut = document.getElementById('checkOut').value;
+      const phone = document.getElementById('guestPhone').value.trim();
+
+      if (!bookingForm.reportValidity()) return;
+      if (checkOut <= checkIn) {
+        alert('Check-out must be after check-in.');
+        return;
+      }
+
+      const message =
+        'Hi Theta Resort, I would like to enquire about a booking.\n\n' +
+        'Room: ' + currentRoom + '\n' +
+        'Name: ' + name + '\n' +
+        'Check-in: ' + checkIn + '\n' +
+        'Check-out: ' + checkOut + '\n' +
+        'Contact: ' + phone + '\n\n' +
+        'Please confirm availability, the official rate and any deposit required.';
+
+      window.open(whatsappUrl(message), '_blank', 'noopener,noreferrer');
+    });
+
+    // Event enquiry opens WhatsApp with the visitor's prepared message.
+    document.getElementById('eventForm').addEventListener('submit', event => {
+      event.preventDefault();
+
+      const name = document.getElementById('eventName').value.trim();
+      const date = document.getElementById('eventDate').value;
+      const guests = document.getElementById('delegates').value;
+      const details = document.getElementById('eventMessage').value.trim();
+
+      const message =
+        'Hi Theta Resort, I would like to request an event quote.\n\n' +
+        'Name: ' + name + '\n' +
+        'Preferred date: ' + date + '\n' +
+        'Number of guests/delegates: ' + guests + '\n' +
+        'Event details: ' + (details || 'Please contact me to discuss requirements.') +
+        '\n\nPlease let me know availability and pricing.';
+
+      window.open(whatsappUrl(message), '_blank', 'noopener,noreferrer');
+    });
+
+    // Prevent selecting an event date in the past.
+    document.getElementById('eventDate').min = new Date().toISOString().split('T')[0];
+  </script>
+</body>
+</html>
